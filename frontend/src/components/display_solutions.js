@@ -26,7 +26,7 @@ function Solutions() {
             <Link to={`/solution/${solution.fileName}`}>
               {solution.fileName}
             </Link> - {new Date(solution.creationDate).toLocaleDateString()}
-            {solution.isRecent && <span style={{ color: 'red' }}> - New!</span>}
+            {solution.isRecent && <span style={{ color: 'red' }}> - New</span>}
           </li>
         ))}
       </ul>

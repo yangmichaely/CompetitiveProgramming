@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import {Link} from "react-router-dom";
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 function Solutions() {
   const [solutions, setSolutions] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/api/solutions')
+    fetch(`${apiUrl}/api/solutions`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');

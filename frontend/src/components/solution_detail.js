@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+const apiUrl = process.env.REACT_APP_API_BASE_URL;
 
 function SolutionDetail() {
   const { fileName } = useParams();  // Get the fileName from the URL
@@ -7,7 +8,7 @@ function SolutionDetail() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3001/api/solution/${fileName}`)
+    fetch(`${apiUrl}/api/solution/${fileName}`)
       .then(response => {
         if (!response.ok) {
           // Handle non-2xx HTTP responses

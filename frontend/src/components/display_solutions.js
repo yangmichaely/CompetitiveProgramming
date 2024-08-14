@@ -19,7 +19,7 @@ function Solutions() {
 
   return (
     <div>
-      <h1>Michael's Competitive Programming Solutions</h1>
+      <h1>Competitive Programming Solutions</h1>
       <ul>
         {solutions.map((solution, index) => (
           <li key={index}>
